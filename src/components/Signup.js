@@ -6,7 +6,7 @@ export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup, currentUser } = useAuth();
+  const { signup } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +52,6 @@ export default function Signup() {
         </Card.Body>
       </Card>
       <div className='w-100 text-center mt-2'>
-        {JSON.stringify(currentUser)}
         Already have an account? Log In
       </div>
     </>
