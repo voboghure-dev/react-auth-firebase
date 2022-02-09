@@ -1,6 +1,6 @@
 # React Authentication with Firebase and Routing
 
-In this App I am practicing authentication with firebase and routing.
+In this App I tried `React v17+` authentication with `Firebase v9+` and `React Routing v6+`.
 
 ## Available Scripts
 
