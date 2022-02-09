@@ -4,6 +4,7 @@ import Signup from './Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Login from './Login';
+import PrivateOutlet from './PrivateOutlet';
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
-              <Route exact path='/' element={<Dashboard />} />
               <Route path='/signup' element={<Signup />} />
               <Route path='/login' element={<Login />} />
+              <Route path='/*' element={<PrivateOutlet />}>
+                <Route path='dashboard' element={<Dashboard />} />
+              </Route>
             </Routes>
           </AuthProvider>
         </Router>
