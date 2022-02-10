@@ -31,7 +31,7 @@ export function AuthProvider({ children }) {
   }
 
   function resetPassword(email) {
-    return sendPasswordResetEmail(email);
+    return sendPasswordResetEmail(auth, email);
   }
 
   useEffect(() => {
