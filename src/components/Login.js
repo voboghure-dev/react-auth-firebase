@@ -20,7 +20,6 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value);
       navigate('/dashboard');
     } catch (error) {
-      // console.log(error.message);
       setError('Fail to login.');
     }
 

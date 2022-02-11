@@ -25,7 +25,6 @@ export default function Signup() {
       await signup(emailRef.current.value, passwordRef.current.value);
       navigate('/');
     } catch (error) {
-      // console.log(error.message);
       setError('Fail to create an account.');
     }
 

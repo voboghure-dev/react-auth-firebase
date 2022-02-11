@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 export default function ForgotPassword() {
   const emailRef = useRef();
-  const { resetPassword } = useAuth();
+  const { resetUserPassword } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -17,10 +17,9 @@ export default function ForgotPassword() {
       setMessage('');
       setError('');
       setLoading(true);
-      await resetPassword(emailRef.current.value);
-      setError('Check your inbox for further instructions.');
+      await resetUserPassword(emailRef.current.value);
+      setMessage('Check your inbox for further instructions.');
     } catch (error) {
-      console.log(error);
       setError('Failed to reset password.');
     }
 
