@@ -15,7 +15,7 @@ export default function Dashboard() {
       await logout();
       navigate('/login');
     } catch {
-      setError('Failed to out out.');
+      setError('Failed to logout.');
     }
   }
 
